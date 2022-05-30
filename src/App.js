@@ -9,6 +9,7 @@ import HeroModel from "./components/HeroModel";
 import Footer from "./components/Footer";
 import ListModels from "./components/ListModels";
 import LikedModels from "./components/LikedModels";
+import UploadForm from "./components/UploadForm";
 
 function App() {
   const [previewFile, setPreviewFile] = useState("P1");
@@ -117,7 +118,9 @@ function App() {
                 onChange={(e) => setSearchTxt(e.target.value)}
               />
             </div>
-            <button title="This is not implemented yet">Upload</button>
+            <a href="#upload">
+              <button title="Upload 3d model">Upload</button>
+            </a>
           </div>
           <div className="content-container">
             <div className="allModel-container">
@@ -200,6 +203,7 @@ function App() {
           )}
         </div>
       )}
+      <UploadForm />
       <Footer />
     </div>
   );

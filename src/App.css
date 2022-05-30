@@ -206,7 +206,7 @@ canvas {
   padding-left: 10px;
   border-radius: 8px;
 }
-input {
+.utilities input {
   width: 100%;
   height: 10px;
   border: none;
@@ -214,7 +214,7 @@ input {
   /* background-color: #c8c8c8; */
   font-family: "Poppins", sans-serif;
 }
-input:focus {
+.utilities input:focus {
   border: none;
   outline: none;
 }
@@ -292,7 +292,45 @@ input:focus {
   border-radius: 10px;
   border: 3px solid #fbfbfb;
 }
-
+.form-container {
+  width: 300px;
+  height: 360px;
+  margin: 0 auto;
+  border: 1.5px solid rgba(233, 30, 99, 0.4);
+  padding: 30px;
+  margin-bottom: 50px;
+  border-radius: 8px;
+  background-color: #fbfbfb;
+  color: #5f6368;
+  box-shadow: 0px 0px 4px 1px rgba(233, 30, 99, 0.4);
+}
+form {
+  width: 95%;
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+ul li {
+  margin-top: 20px;
+}
+form input {
+  width: 100%;
+  padding: 6px;
+  outline: none;
+  border: 1px solid #df4779;
+  border-radius: 5px;
+}
+form button {
+  padding: 6px 10px;
+  border: 1.5px solid #e77198;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #fbfbfb;
+  color: #ea3b76;
+  outline: none;
+  cursor: pointer;
+}
 /* Media queries */
 /* Media Query for Mobile Devices */
 @media (max-width: 490px) {
