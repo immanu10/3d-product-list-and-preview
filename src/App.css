@@ -1,38 +1,417 @@
-.App {
+.hero-section {
+  /* background-color: #e096af; */
+  height: 600px;
+  width: 100%;
+  margin-bottom: 60px;
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-evenly;
+}
+.hero-model {
+  width: 500px;
+  height: 90%;
+}
+#content {
+  margin-bottom: 100px;
+}
+.hero-txts {
+  width: 600px;
+  height: 700px;
+  /* background-color: #e096af; */
+  color: #f179a1;
+  margin-left: 50px;
+  padding-top: 80px;
+}
+.hero-txts h1 {
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1.4em;
+}
+.hero-txts p {
+  font-size: 20px;
+  font-weight: 400;
+  color: #5f6368;
+}
+.cta {
+  padding: 10px 40px;
+  /* background-color: #fbfbfb;
+  border: 2px solid #ea3b76; */
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 18px;
+  /* color: #e91e63; */
+  background-color: #ea3b76;
+  color: #fff;
+}
+.cta:hover {
+  background-color: #e91e63;
+}
+
+.content-container {
+  width: 100%;
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+}
+.preview-container {
+  width: 45%;
+  height: 600px;
+  /* margin-top: 40px; */
+  /*margin-left: 40px; */
+  margin-right: 30px;
+  /* border: 1px solid red; */
+  border-radius: 10px;
+  /* margin: 0 auto; */
+  background-image: url("../public/bg1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.allModel-container {
+  width: 45%;
+  height: 550px;
+  overflow-y: scroll;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  /* padding-right: 30px; */
+  /* margin-bottom: 30px; */
+  margin-left: 30px;
+  /* border: 1px solid ; */
+  background-color: #fbfbfb;
+  padding: 20px 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 8px -4px rgba(0, 0, 0, 1);
+}
+.previewmodel {
+  width: 100%;
+  height: 100%;
+}
+canvas {
+  border-radius: 10px;
+}
+.previewmodel:hover {
+  cursor: grab;
+}
+.product {
+  width: 220px;
+  height: 290px;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%), 0 1px 2px 0 rgb(0 0 0 / 6%);
+  border: 2px solid transparent;
+  border-radius: 16px;
+  padding: 4px;
+  background-color: #fff;
+  margin-left: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.active {
+  border: 2px solid #f287ab;
+  box-shadow: 0 0px 6px -1px #e096af;
+}
+.product:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 4px 1px rgba(233, 30, 99, 0.3);
+}
+.product-model {
+  width: 100%;
+  height: 230px;
+  background-color: #f1f0fe;
+  border-radius: 16px 16px 0 0;
+}
+.product-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+}
+.product-info p {
+  font-size: 0.9em;
+}
+.like-btn {
+  width: 35px;
+  height: 35px;
+  padding-top: 6px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  box-shadow: 0 1px 4px 0 rgb(0 0 0 / 10%);
+  cursor: pointer;
+  text-align: center;
+}
+.icon {
+  /* width: 20px;
+  height: 22px; */
+  color: #c8c8c8;
+  transition: all 0.2s ease-in-out;
+}
+.fillLike {
+  color: #ff5656;
+  width: 13px;
+  height: 13px;
+  animation: fillLike 0.2s; /* other keywords like "infinite alternate" can be useful here */
+}
+
+@keyframes fillLike {
+  /* You could think of as "step 1" */
+
+  50% {
+    color: #ee9c9c;
+    width: 15px;
+    height: 15px;
+  }
+  75% {
+    color: #e3a0a0;
+    width: 16px;
+    height: 16px;
+  }
+  100% {
+    color: #de9b9b;
+    width: 18px;
+    height: 18px;
+  }
+}
+.preview-content {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  position: absolute;
+  top: 0;
+  padding-bottom: 60px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.85), transparent);
+  color: #fff;
+  user-select: none;
+}
+.preview-content h2 {
+  margin-left: 30px;
+}
+.preview-content p {
+  margin-left: 30px;
+}
+.utilities {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+.utilities div {
+  width: 70%;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border: 2px solid #e096af;
+  padding-left: 10px;
+  border-radius: 8px;
+}
+input {
+  width: 100%;
+  height: 10px;
+  border: none;
+  padding: 5px;
+  /* background-color: #c8c8c8; */
+  font-family: "Poppins", sans-serif;
+}
+input:focus {
+  border: none;
+  outline: none;
+}
+.utilities button {
+  /* width: 12%; */
+  height: 100%;
+  border: none;
+  background-color: #ea3b76;
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
+.utilities button:hover {
+  cursor: pointer;
+  background-color: #e91e63;
+}
+
+.preview-txt-div {
+  color: #e71057;
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+  position: absolute;
+  bottom: 0;
+  user-select: none;
+  display: flex;
+  align-items: center;
+}
+.nav-bar {
+  width: fit-content;
+  margin: 0px auto;
+}
+.nav-bar button {
+  padding: 8px 30px;
+  border: 1.5px solid #e77198;
+  border-radius: 20px;
+  font-size: 16px;
+  background-color: #fbfbfb;
+  color: #ea3b76;
+  outline: none;
+  margin-left: 20px;
+  cursor: pointer;
+}
+.active-navbtn {
+  background-color: #e77198;
+  color: #fff;
+}
+.footer {
+  width: 100%;
+  background-color: #df4779;
+  color: #fff;
+  padding: 4px 0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+.allModel-container {
+  scrollbar-width: auto;
+  scrollbar-color: #c1c6cd #fbfbfb;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Chrome, Edge, and Safari */
+.allModel-container::-webkit-scrollbar {
+  width: 16px;
+}
+
+.allModel-container::-webkit-scrollbar-track {
+  background: #fbfbfb;
+}
+
+.allModel-container::-webkit-scrollbar-thumb {
+  background-color: #c1c6cd;
+  border-radius: 10px;
+  border: 3px solid #fbfbfb;
+}
+
+/* Media queries */
+/* Media Query for Mobile Devices */
+@media (max-width: 490px) {
+  .hero-section {
+    height: 400px;
+    width: 100%;
+  }
+  .hero-model {
+    width: 300px;
+    height: 80%;
+  }
+  .hero-txts {
+    position: absolute;
+    z-index: 10;
+    width: 90%;
+    height: 600px;
+    color: #f179a1;
+  }
+  .hero-txts h1 {
+    font-size: 34px;
+  }
+  .hero-txts p {
+    font-size: 16px;
+  }
+  .content-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    margin: 0 14px;
+  }
+  .preview-container {
+    width: 90%;
+    margin-top: 40px;
+    margin-left: 20px;
+  }
+  .allModel-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .utilities {
+    width: 80%;
+  }
+  .product {
+    width: 200px;
+    height: 270px;
+  }
+  .product-info p {
+    font-size: 0.6em;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 491px) and (max-width: 954px) {
+  .hero-section {
+    height: 600px;
+    width: 100%;
+    margin-bottom: 70px;
   }
-  to {
-    transform: rotate(360deg);
+  .hero-model {
+    width: 300px;
+    height: 90%;
+    margin-left: 50%;
+  }
+  .hero-txts {
+    position: absolute;
+    right: 34%;
+    z-index: 10;
+    width: 60%;
+    height: 600px;
+    color: #f179a1;
+  }
+  .hero-txts h1 {
+    font-size: 40px;
+  }
+  .hero-txts p {
+    font-size: 18px;
+  }
+  .content-container {
+    width: 100%;
+  }
+  .preview-container {
+    width: 58%;
+  }
+  .allModel-container {
+    width: 30%;
+  }
+  .product {
+    width: 200px;
+    height: 280px;
+  }
+  .utilities {
+    width: 80%;
+  }
+}
+@media (min-width: 492px) and (max-width: 820px) {
+  .content-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .preview-container {
+    width: 90%;
+    margin-top: 40px;
+    margin-left: 40px;
+  }
+  .allModel-container {
+    width: 100%;
+  }
+}
+@media (min-width: 955px) and (max-width: 1199px) {
+  .content-container {
+    width: 100%;
+  }
+  .preview-container {
+    width: 60%;
+  }
+  .allModel-container {
+    width: 30%;
   }
 }
